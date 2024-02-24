@@ -1,0 +1,86 @@
+<div *ngIf="hotel">
+    <div
+    class="modal"
+    tabindex="-1"
+    role="dialog"
+    aria-hidden="true" id="editCliente" 
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3>
+              Modificar Hotel:
+  
+            </h3>
+            <form (ngSubmit)="Update()">
+
+                <div class="form-group">
+                    <label for="codigo">Codigo:</label>
+                    <input
+                      class="form-control"
+                      type="number"
+                      id="codigo"
+                      name="codigo"
+                      required
+                      [(ngModel)]="hotel.codigo"
+                      disabled="true"
+                      
+                    />
+                  </div>
+        
+                  <div class="form-group">
+                    <label for="lugar">Lugar:</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="lugar"
+                      name="lugar"
+                      required
+                      [(ngModel)]="hotel.lugar"
+                      disabled="true"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="lugar">Habitacion:</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="habitacion"
+                      name="habitacion"
+                      required
+                      [(ngModel)]="hotel.habitacion"
+                      disabled="true"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="lugar">Disponible:</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="disponible"
+                      name="disponible"
+                      required
+                      [(ngModel)]="hotel.disponile"
+                    />
+                  </div>
+        
+                  <!-- <div class="form-group">
+                    <label for="habitaciones">Habitaciones:</label>
+                    <select id="habitaciones" class="form-control" formControlName="habitaciones" multiple>
+                        <option *ngFor="let habitacion of habitaciones" [value]="habitacion">{{ habitacion.tipo }} {{ habitacion.camas }}</option>
+                    </select>
+                </div> -->
+  
+              <button data-dismiss="modal" class="btn btn-primary" type="submit">Insertar</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">
+                  Cerrar
+                </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

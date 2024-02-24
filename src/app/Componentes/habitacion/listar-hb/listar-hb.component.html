@@ -1,0 +1,28 @@
+<h3>Habitaciones</h3>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Codigo</th>
+            <th>Tipo</th>
+            <th>Camas</th>
+            <th>Costo</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let obj of ListaHb">
+            <td>{{ obj.codigo }}</td>
+            <td>{{ obj.tipo }}</td>
+            <td>{{ obj.camas }}</td>
+            <td>{{ obj.costo}}</td>
+            <td>
+                <button data-toggle="modal" data-target="#editCliente" class="btn btn-primary mx-3" (click)="EditarHb(obj)" >Editar</button>
+                <button class="btn btn-secondary" (click)="EliminarHb(obj)" >Eliminar</button>
+              
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+

@@ -1,0 +1,10 @@
+<div>
+    <h1>Administración de Buses</h1>
+    <hr />
+    <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#addCliente">
+      Insertar Bus
+    </button>
+    <app-listar-bus (editarClienteEvent)="cargarEditarBus($event)"></app-listar-bus>
+    <app-insertar-bus [displayStyle]="(showInsertarBus ? 'block' : 'none')"></app-insertar-bus>
+    <app-modificar-bus  [bus]="editarBus"></app-modificar-bus>
+  </div>

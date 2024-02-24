@@ -1,0 +1,10 @@
+<div>
+    <h1>Administración de Reservas</h1>
+    <hr />
+    <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#addCliente">
+      Insertar Reserva
+    </button>
+    <app-listar-reserva (editarClienteEvent)="cargarEditarReserva($event)"></app-listar-reserva>
+    <app-insertar-reserva [displayStyle]="(showInsertarReserva ? 'block' : 'none')"></app-insertar-reserva>
+    <app-modificar-reserva  [reserva]="editarReserva"></app-modificar-reserva>
+  </div>

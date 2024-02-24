@@ -1,0 +1,10 @@
+<div>
+    <h1>Administración de Hoteles</h1>
+    <hr />
+    <!-- <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#addCliente">
+      Insertar Hotel
+    </button> -->
+    <app-listar-hotel (editarClienteEvent)="cargarEditar($event)"></app-listar-hotel>
+    <app-insertar-hotel [displayStyle]="(showInsertar ? 'block' : 'none')"></app-insertar-hotel>
+    <app-modificar-hotel  [hotel]="editar"></app-modificar-hotel>
+  </div>

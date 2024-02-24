@@ -1,0 +1,122 @@
+<div *ngIf="chofer">
+    <div
+    class="modal"
+    tabindex="-1"
+    role="dialog"
+    aria-hidden="true" id="editCliente" 
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3>
+              Modificar Chofer:
+  
+            </h3>
+            <form (ngSubmit)="Update()">
+              <div class="form-group">
+                <label for="Código">Código:</label>
+                <input
+                  class="form-control"
+                  type="number"
+                  id="Código"
+                  name="Código"
+                  required
+                  [(ngModel)]="chofer.Codigo"
+                />
+              </div>
+  
+              <div class="form-group">
+                <label for="Cedula">Cédula:</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="Cedula"
+                  name="Cedula"
+                  required
+                  [(ngModel)]="chofer.Cedula"
+                />
+              </div>
+  
+              <div class="form-group">
+                <label for="Nombre">Nombre:</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="Nombre"
+                  name="Nombre"
+                  required
+                  [(ngModel)]="chofer.Nombre"
+                />
+              </div>
+  
+              <div class="form-group">
+                <label for="Apellidos">Apellidos:</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="Apellidos"
+                  name="Apellidos"
+                  required
+                  [(ngModel)]="chofer.Apellido"
+                />
+              </div>
+              <div class="form-group">
+                <label for="Sexo">Sexo:</label>
+                <select 
+                  class="form-control"
+                  type="text"
+                  id="Sexo"
+                  name="Sexo"
+                  required
+                  [(ngModel)]="chofer.Sexo"
+                >
+                <option>F</option>
+                <option>M</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="Fecha">Fecha de Nacimiento:</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  placeholder="Fecha"
+                  name="FechaNacimiento"
+                  [ngModel]="chofer.FechaNacimiento | date:'yyyy-MM-dd' : 'UTC'" 
+                  (ngModelChange)="chofer.FechaNacimiento = $event"
+                />
+              </div>
+              <div class="form-group">
+                <label for="Licencia">Licencia:</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="Licencia"
+                  name="Licencia"
+                  required
+                  [(ngModel)]="chofer.Licencia"
+                />
+              </div>
+
+                <div class="form-group">
+                <label for="AniosExperiencia">Años experiencia:</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  id="AniosExperiencia"
+                  name="AniosExperiencia"
+                  required
+                  [(ngModel)]="chofer.AniosExperiencia"
+                />
+              </div>
+  
+              <button data-dismiss="modal" class="btn btn-primary" type="submit">Insertar</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">
+                  Cerrar
+                </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

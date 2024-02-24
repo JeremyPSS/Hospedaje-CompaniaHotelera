@@ -1,0 +1,78 @@
+<div *ngIf="habitacion">
+    <div
+    class="modal"
+    tabindex="-1"
+    role="dialog"
+    aria-hidden="true" id="editCliente" 
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <h3>
+              Modificar Habitacion:
+  
+            </h3>
+            <form (ngSubmit)="Update()">
+              
+                <div class="form-group">
+                    <label for="codigo">Codigo:</label>
+                    <input
+                      class="form-control"
+                      type="number"
+                      id="codigo"
+                      name="codigo"
+                      required
+                      [(ngModel)]="
+                      habitacion.codigo"
+                    />
+                  </div>
+        
+                  <div class="form-group">
+                    <label for="tipo">Tipo:</label>
+                    <select class="form-control"
+                    type="text" name="tipo" id="tipo" required
+                    [(ngModel)]="
+                    habitacion.tipo">
+                        <option value="Matrimonial">Matrimonial</option>
+                        <option value="Sencilla">Sencilla</option>
+                        <option value="Multiple">Multiple</option>
+                    </select>
+                  </div>
+        
+                  <div class="form-group">
+                    <label for="camas">Camas:</label>
+                    <input
+                      class="form-control"
+                      type="number"
+                      id="camas"
+                      name="camas"
+                      required
+                      [(ngModel)]="
+                      habitacion.camas"
+                    />
+                  </div>
+        
+                  <div class="form-group">
+                    <label for="costo">Costo:</label>
+                    <input
+                      class="form-control"
+                      type="number"
+                      id="costo"
+                      name="costo"
+                      required
+                      [(ngModel)]="
+                      habitacion.costo"
+                    />
+                  </div>
+        
+              <button data-dismiss="modal" class="btn btn-primary" type="submit">Insertar</button>
+              <button type="button" class="btn btn-danger" data-dismiss="modal">
+                  Cerrar
+                </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

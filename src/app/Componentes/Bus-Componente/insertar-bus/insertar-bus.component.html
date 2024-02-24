@@ -1,0 +1,51 @@
+<div class="modal fade" tabindex="-1" role="dialog" aria-hidden="true" id="addCliente">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <h3>
+                    Agregar Bus:
+                </h3>
+                <form>
+                    <div class="form-group">
+                        <label for="Codigo">Código:</label>
+                        <input class="form-control" type="number" id="Codigo" name="Codigo" required
+                            [(ngModel)]="nuevo.codigo" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Placa">Placa:</label>
+                        <input class="form-control" type="text" id="Placa" name="Placa" required
+                            [(ngModel)]="nuevo.placa" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Tipo">Tipo:</label>
+                        <input class="form-control" type="text" id="Tipo" name="Tipo" required
+                            [(ngModel)]="nuevo.tipo" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Base">Base:</label>
+                        <input class="form-control" type="text" id="Base" name="Base" required
+                            [(ngModel)]="nuevo.base" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Estado">Estado:</label>
+                        <select class="form-control" type="text" id="Estado" name="Estado" required
+                            [(ngModel)]="nuevo.estado">
+                            <option>Libre</option>
+                            <option>Ocupado</option>
+                            <option>Mantenimiento</option>
+                        </select>
+                    </div>
+                    <button data-dismiss="modal" class="btn btn-primary" type="submit"
+                        (click)="Insert()">Insertar</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">
+                        Cerrar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

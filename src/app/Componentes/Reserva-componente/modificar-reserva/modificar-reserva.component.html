@@ -1,0 +1,78 @@
+<div *ngIf="reserva">
+    <div class="modal" tabindex="-1" role="dialog" aria-hidden="true" id="editCliente">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h3>
+                        Modificar Reserva:
+                    </h3>
+                    <form (ngSubmit)="Update()">
+                        <div class="form-group">
+                            <label for="Código">Código:</label>
+                            <input class="form-control" type="number" id="Código" name="Código" required
+                                [(ngModel)]="reserva.codigo" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nomCliente">Nombre CLiente:</label>
+                            <input class="form-control" type="text" id="nomCliente" name="nomCliente" required
+                                [(ngModel)]="reserva.nombreCliente" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="edadCliente">Edad Cliente:</label>
+                            <input class="form-control" type="number" id="edadCliente" name="edadCliente" required
+                                [(ngModel)]="reserva.edadCliente" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Lugar">Lugar:</label>
+                            <select class="form-control" type="text" id="Lugar" name="Lugar" required
+                                [(ngModel)]="reserva.lugar">
+                                <option>Salinas</option>
+                                <option>Manta</option>
+                                <option>Atacames</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="TipoH">Tipo Habitacion:</label>
+                            <select class="form-control" type="text" id="TipoH" name="TipoH" required
+                                [(ngModel)]="reserva.tipoHabitacion">
+                                <option>Matrimonial</option>
+                                <option>Sencilla</option>
+                                <option>Multiple</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cantidadP">Cantidad Personas:</label>
+                            <input class="form-control" type="number" id="cantidadP" name="cantidadP" required
+                                [(ngModel)]="reserva.cantidadPersonas" />
+                        </div>
+                        <div class="form-group">
+                            <label for="FechaI">Fecha Ingreso:</label>
+                            <input class="form-control" type="date" id="FechaI" name="FechaI" required
+                                [(ngModel)]="reserva.fechaIngreso" />
+                        </div>
+                        <div class="form-group">
+                            <label for="FechaS">Fecha Salida:</label>
+                            <input class="form-control" type="date" id="FechaS" name="FechaS" required
+                                [(ngModel)]="reserva.fechaSalida" />
+                        </div>
+                        <div class="form-group">
+                            <label for="CostoTotal">Costo Total:</label>
+                            <input class="form-control" type="text" id="CostoTotal" name="CostoTotal" required
+                                [(ngModel)]="reserva.costoTotal" />
+                        </div>
+
+                        <button data-dismiss="modal" class="btn btn-primary" type="submit">Insertar</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">
+                            Cerrar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,126 @@
+<div
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true"
+  id="addCliente" 
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h3>
+          Agregar Chofer:
+        </h3>
+        <form >
+          <div class="form-group">
+            <label for="Codigo">Código:</label>
+            <input
+              class="form-control"
+              type="number"
+              id="Codigo"
+              name="Codigo"
+              required
+              [(ngModel)]="nuevo.Codigo"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="Cedula">Cédula:</label>
+            <input
+              class="form-control"
+              type="text"
+              id="Cedula"
+              name="Cedula"
+              required
+              [(ngModel)]="nuevo.Cedula"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="Nombre">Nombre:</label>
+            <input
+              class="form-control"
+              type="text"
+              id="Nombre"
+              name="Nombre"
+              required
+              [(ngModel)]="nuevo.Nombre"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="Apellidos">Apellido:</label>
+            <input
+              class="form-control"
+              type="text"
+              id="Apellidos"
+              name="Apellidos"
+              required
+              [(ngModel)]="nuevo.Apellido"
+            />
+          </div>
+                   
+          <div class="form-group">
+            <label for="Sexo">Sexo:</label>
+            <select 
+              class="form-control"
+              type="text"
+              id="Sexo"
+              name="Sexo"
+              required
+              [(ngModel)]="nuevo.Sexo"
+            >
+            <option>F</option>
+            <option>M</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="Fecha">Fecha de Nacimiento:</label>
+            <input
+              type="date"
+              class="form-control"
+              placeholder="Fecha"
+              name="FechaNacimiento"
+              [ngModel]="nuevo.FechaNacimiento | date:'yyyy-MM-dd' : 'UTC'" 
+              (ngModelChange)="nuevo.FechaNacimiento = $event"
+            />
+          </div>
+
+
+
+
+
+
+          <div class="form-group">
+            <label for="Licencia">Licencia:</label>
+            <input
+              class="form-control"
+              type="text"
+              id="Licencia"
+              name="Licencia"
+              required
+              [(ngModel)]="nuevo.Licencia"
+            />
+          </div>
+          <div class="form-group">
+            <label for="AniosExperiencia">Anios Experiencia:</label>
+            <input
+              class="form-control"
+              type="text"
+              id="AniosExperiencia"
+              name="AniosExperiencia"
+              required
+              [(ngModel)]="nuevo.AniosExperiencia"
+            />
+          </div>
+
+          <button data-dismiss="modal" class="btn btn-primary" type="submit" (click)="Insert()" >Insertar</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">
+            Cerrar
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

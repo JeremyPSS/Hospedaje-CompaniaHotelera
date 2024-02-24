@@ -1,0 +1,35 @@
+<h3>Choferes</h3>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Código</th>
+            <th>Cédula</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Sexo</th>
+            <th>Fecha Nac.</th>
+            <th>Licencia</th>
+            <th>Anios exp.</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let obj of ListaChofer">
+            <td>{{ obj.Codigo }}</td>
+            <td>{{ obj.Cedula }}</td>
+            <td>{{ obj.Nombre }}</td>
+            <td>{{ obj.Apellido}}</td>
+            <td>{{ obj.Sexo}}</td> 
+            <td>{{ obj.FechaNacimiento }}</td>
+            <td>{{ obj.Licencia }}</td>
+            <td>{{ obj.AniosExperiencia }}</td>
+            <td>
+                <button data-toggle="modal" data-target="#editCliente" class="btn btn-primary mx-3" (click)="EditarChofer(obj)" >Editar</button>
+                <button class="btn btn-secondary" (click)="EliminarChofer(obj)" >Eliminar</button>
+              
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
